@@ -7,10 +7,23 @@ let count= 0;
 
 
 
+var myInstects = document.querySelectorAll('img');
+var newq;
+let h,w,nh,nw,s; 
+
 
 // Funktion der kaldes ved click som giver sommerfugle og fluer random postitioner
 function placeObject(obj){
     console.log(obj, "er kommet ind i denne funktion");
+    // h = window.innerHeight - 50;
+    // w = window.innerWidth - 50;
+    // nh = Math.floor(Math.random() * h);
+    // nw = Math.floor(Math.random() * w);
+    // s = Math.floor(Math.random()*1000) + 500
+    // return [nh,nw,s]; 
+    
+    
+
     // Find en tilfældig xPosition
     // Find en tilfældig y position
     // Brug CSS til at placere den de nye steder
@@ -18,6 +31,16 @@ function placeObject(obj){
     // i stands for "index". you could also call this banana or haircut. it's a variable
 
 }
+
+// myInstects.forEach(function myInstects(myclass) {
+//     var newq = placeObject();
+//     $(myclass).animate({ 
+//       top: newq[0], left: newq[1] 
+//       },
+//       newq[2],   function(){
+//         myInstects(myclass);        
+//     });
+//   });
 
 
 
