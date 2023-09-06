@@ -6,6 +6,48 @@
     display: inline;
 }
 
-#squares img{
+#insects img{
     width: 100px;
 }
+
+#insects{
+    position: relative;
+    display: flex;
+}
+
+.fluer{
+    position: absolute;
+}
+.sommerfugle{
+    position: absolute;
+}
+
+#pos1{
+left: 50px;
+top: 150px;
+}
+
+#pos2{
+    left: 800px;
+    top: 300px;
+    }
+
+#pos3{
+    left: 400px;
+    top: 300px;
+    }
+
+#pos4{
+    left: 200px;
+    top: 500px;
+    }
+
+#pos5{
+    left: 1400px;
+    top: 600px;
+    }
+
+#pos6{
+    left: 1200px;
+    top: 400px;
+    }

@@ -6,13 +6,28 @@ let count= 0;
 
 
 
+
+
+// Funktion der kaldes ved click som giver sommerfugle og fluer random postitioner
+function placeObject(obj){
+    console.log(obj, "er kommet ind i denne funktion");
+    // Find en tilfældig xPosition
+    // Find en tilfældig y position
+    // Brug CSS til at placere den de nye steder
+    // Vis den igen
+    // i stands for "index". you could also call this banana or haircut. it's a variable
+
+}
+
+
+
 // Laver hook til firkanterne i html
 let myFlys = document.getElementsByClassName("fluer");
 // Sætter loops igang og definerer hvad der skal ske
 for(let i =0; i < myFlys.length; i++){
     console.log(myFlys[i]);
 // Laver en function, der fotæller at loopet skal ske ved click
-    myFlys[i].addEventListener("click", () => {
+    myFlys[i].addEventListener("click", (e) => {
         console.log("Flue er clicket");
 
         // deffinerer at count skal stige med 1 ved hvert click
@@ -20,17 +35,22 @@ for(let i =0; i < myFlys.length; i++){
         console.log(count);
         // Skubber count ud i dom
         myPoints.innerText = count ;
+
+        // Får fluer til at forsvinde ved klik
+        e.target.style.display = "none";
+        // Kalder function der skal vise flue igen på ny position
+        placeObject(e.target);
     })
     
 }
 
 // Laver hook til firkanterne i html
-let myButterflys = document.getElementsByClassName("sommerfugl");
+let myButterflys = document.getElementsByClassName("sommerfugle");
 // Sætter loops igang og definerer hvad der skal ske
 for(let i =0; i < myButterflys .length; i++){
     console.log(myButterflys [i]);
 // Laver en function, der fotæller at loopet skal ske ved click
-    myButterflys [i].addEventListener("click", () => {
+    myButterflys [i].addEventListener("click", (e) => {
         console.log("Firkant er clicket");
 
         // deffinerer at count skal stige med 1 ved hvert click
@@ -38,9 +58,18 @@ for(let i =0; i < myButterflys .length; i++){
         console.log(count);
         // Skubber count ud i dom
         myPoints.innerText = count ;
+
+        // Får sommerfugle til at forsvinde ved klik
+        e.target.style.display = "none";
+        // Kalder function der skal vise flue igen på ny position
+        placeObject(e.target);
     })
     
 }
+
+
+
+
 
 
 
