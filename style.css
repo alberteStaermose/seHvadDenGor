@@ -1,0 +1,11 @@
+#hero{
+    text-align: center;
+}
+
+#hero p{
+    display: inline;
+}
+
+#squares img{
+    width: 100px;
+}
