@@ -7,18 +7,50 @@ let count= 0;
 
 
 
-var myInstects = document.querySelectorAll('img');
-var newq;
-let h,w,nh,nw,s; 
+
+let myInstects = document.querySelector('#insects');
+
+myInstects.classList.add("flyver")
+
+// for(let i =0; i < myFlys.length; i++){
+//     let id = null;
+//     let pos = 0;
+//     clearInterval(id);
+//     id = setInterval(frame, 5);
+//     function frame() {
+//       if (pos == 350) {
+//         clearInterval(id);
+//       } else {
+//         pos++; 
+//         elem.style.top = pos + "px"; 
+//         elem.style.left = pos + "px"; 
+//       }
+//     }
+// }
+    
+
+
+
+// Definerer ny højde og bredde samt ny højde og bredde
+let h,w,nh,nw; 
+
+
 
 
 // Funktion der kaldes ved click som giver sommerfugle og fluer random postitioner
 function placeObject(obj){
     console.log(obj, "er kommet ind i denne funktion");
-    // h = window.innerHeight - 50;
-    // w = window.innerWidth - 50;
-    // nh = Math.floor(Math.random() * h);
-    // nw = Math.floor(Math.random() * w);
+    // Giver sommerfugle og fluer nye decimaler til ny plads
+    h = window.innerHeight - 300;
+    w = window.innerWidth - 300;
+    nh = Math.floor(Math.random() * h);
+    nw = Math.floor(Math.random() * w);
+    console.log(nh, nw);
+    // Definerer at decimalerne skal være i px
+    obj.style.top = nh + 'px';
+    obj.style.left = nw + 'px';
+    // Viser sommerfugle og fluer igen
+    obj.style.display = 'block';
     // s = Math.floor(Math.random()*1000) + 500
     // return [nh,nw,s]; 
     
@@ -32,15 +64,7 @@ function placeObject(obj){
 
 }
 
-// myInstects.forEach(function myInstects(myclass) {
-//     var newq = placeObject();
-//     $(myclass).animate({ 
-//       top: newq[0], left: newq[1] 
-//       },
-//       newq[2],   function(){
-//         myInstects(myclass);        
-//     });
-//   });
+
 
 
 
@@ -50,7 +74,7 @@ let myFlys = document.getElementsByClassName("fluer");
 for(let i =0; i < myFlys.length; i++){
     console.log(myFlys[i]);
 // Laver en function, der fotæller at loopet skal ske ved click
-    myFlys[i].addEventListener("click", (e) => {
+    myFlys[i].addEventListener("click", (bib) => {
         console.log("Flue er clicket");
 
         // deffinerer at count skal stige med 1 ved hvert click
@@ -60,9 +84,9 @@ for(let i =0; i < myFlys.length; i++){
         myPoints.innerText = count ;
 
         // Får fluer til at forsvinde ved klik
-        e.target.style.display = "none";
+        bib.target.style.display = "none";
         // Kalder function der skal vise flue igen på ny position
-        placeObject(e.target);
+        placeObject(bib.target);
     })
     
 }
@@ -89,15 +113,3 @@ for(let i =0; i < myButterflys .length; i++){
     })
     
 }
-
-
-
-
-
-
-
-// Deffinerer hvordan points skal tælle
-// Få dem ud på dom
-
-
-// mySquares.addEventListener("click", () =)s

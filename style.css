@@ -1,9 +1,33 @@
+body{
+    background-color: #ebf9d7;
+}
+
+header{
+    text-align: center;
+}
 #hero{
     text-align: center;
 }
 
 #hero p{
     display: inline;
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+    color: #005b6d;
+}
+
+p{
+    color: #005b6d;
+    font-size: 30px;
+}
+
+#points{
+    font-weight: 700;
+    font-size: 40px;
+    color: #ff7500;
 }
 
 #insects img{
@@ -13,6 +37,8 @@
 #insects{
     position: relative;
     display: flex;
+   
+    height: 3%;
 }
 
 .fluer{
@@ -51,3 +77,23 @@ top: 150px;
     left: 1200px;
     top: 400px;
     }
+
+
+
+    /* Animationer */
+
+.flyver{
+animation-name: flyver_kf;
+animation-duration: 4s;
+animation-timing-function: linear;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes flyver_kf{
+    0%{
+        transform: translate(-50%);
+    }
+    100%{tranform: translate(100%);
+    }
+}
