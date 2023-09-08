@@ -7,10 +7,11 @@ let count= 0;
 
 
 
+// Forsøgt at lave css animation - insekter flyver rundt
+// let myInstects = document.querySelector('#insects');
 
-let myInstects = document.querySelector('#insects');
-
-myInstects.classList.add("flyver")
+// Forsøgt at lave JS animation - insecter flyver rundt
+// myInstects.classList.add("flyver")
 
 // for(let i =0; i < myFlys.length; i++){
 //     let id = null;
@@ -88,6 +89,12 @@ for(let i =0; i < myFlys.length; i++){
         // Kalder function der skal vise flue igen på ny position
         placeObject(bib.target);
     })
+// Forsøgt 
+    // if (bib = false) {
+    //     bib.target.style.display = "none";
+    //     // Kalder function der skal vise flue igen på ny position
+    //     placeObject(bib.target);
+    // }
     
 }
 

@@ -82,7 +82,7 @@ top: 150px;
 
     /* Animationer */
 
-.flyver{
+/* .flyver{
 animation-name: flyver_kf;
 animation-duration: 4s;
 animation-timing-function: linear;
@@ -96,4 +96,4 @@ animation-direction: alternate;
     }
     100%{tranform: translate(100%);
     }
-}
+} */
